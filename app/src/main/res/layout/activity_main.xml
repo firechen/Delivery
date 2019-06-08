@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.james.deliveryapp.Views.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:id="@+id/top_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="25sp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/white"
+            android:layout_margin="15dp"
+            android:text="@string/delivery_title"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/top_bar"
+        android:id="@+id/list"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/main_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="@string/error_msg"
+        android:visibility="gone"/>
+
+</RelativeLayout>
